@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0;
+      }
+      .container {
+        height: 2000px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .abs-parent {
+        position: relative;
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+        left: 940px;
+        text-align: center;
+        /* right: 300px; */
+      }
+      #box-1 {
+        background-color: rgb(255, 0, 0);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      #box-2 {
+        background-color: rgb(255, 255, 0);
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 0;
+        left: 400px;
+      }
+      #box-3 {
+        background-color: rgb(83, 83, 250);
+        width: 100px;
+        height: 100px;
+        position: sticky;
+        top: 0;
+        left: 200px;
+      }
+      #box-4 {
+        background-color: rgb(241, 168, 239);
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="abs-parent">
+        <!-- <p style="background-color: rgb(156, 154, 154)">
+            Relative Parent of Absolute Block
+            </p> -->
+        Relative Parent of Absolute Block
+        <div class="child" id="box-1">Absolute block</div>
+      </div>
+      <div class="child" id="box-2">Relative block</div>
+      <div class="child" id="box-3">Sticky block</div>
+      <div class="child" id="box-4">Fixed block</div>
+    </div>
+  </body>
+</html>
